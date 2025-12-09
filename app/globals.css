@@ -1,0 +1,107 @@
+/* ===========================
+   Tailwind Setup
+   =========================== */
+@import "tailwindcss";
+
+/* ===========================
+   Variabili base tema
+   =========================== */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Variabili OEM */
+  --brand-primary: #0b74ff;
+  --brand-on-primary: #ffffff;
+  --brand-secondary: #f0f4f8;
+  --bg-page: #f3f4f6;
+  --text-primary: #111827;
+}
+
+/* Tema scuro sistema */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Tema scuro personalizzato */
+[data-theme="dark"] {
+  --brand-primary: #1d4ed8;
+  --brand-secondary: #111827;
+  --bg-page: #1f2937;
+  --text-primary: #f9fafb;
+}
+
+/* ===========================
+   Tipografia e corpo pagina
+   =========================== */
+body {
+  background: var(--bg-page, var(--background));
+  color: var(--text-primary, var(--foreground));
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  background: #f7f9fc;
+  color: #1a1a1a;
+}
+
+/* ===========================
+   Scrollbar
+   =========================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.15);
+  border-radius: 4px;
+}
+
+/* ===========================
+   COMPONENTI DASHBOARD
+   =========================== */
+
+/* Card */
+.card {
+  @apply bg-white shadow rounded-lg p-4;
+}
+
+[data-theme="dark"] .card {
+  @apply bg-gray-800 shadow-md;
+}
+
+/* Bottoni */
+.btn-primary {
+  @apply py-2 px-4 rounded font-semibold text-white;
+  background-color: var(--brand-primary);
+}
+
+.btn-primary:hover {
+  background-color: rgb(11 116 255 / 90%);
+}
+
+/* Sidebar */
+.sidebar {
+  @apply bg-gray-50 w-64 min-h-screen shadow-lg transition-all duration-300;
+}
+
+[data-theme="dark"] .sidebar {
+  @apply bg-gray-900;
+}
+
+/* Sidebar collapsed */
+.sidebar.collapsed {
+  @apply w-20;
+}
+
+/* Logo */
+.sidebar .logo {
+  @apply text-2xl font-bold py-4 px-2;
+}
