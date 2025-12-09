@@ -2,7 +2,8 @@
 "use client";
 
 import { ReactNode, useEffect, useState } from "react";
-import { OemSettings } from ".next/dev/types/oem";
+import type { OemSettings } from "@/types";
+
 
 export default function OemThemeProvider({ children }: { children: ReactNode }) {
   const [oemSettings, setOemSettings] = useState<OemSettings | null>(null);

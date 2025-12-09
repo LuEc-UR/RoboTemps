@@ -2,9 +2,8 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "@/api/auth/[...nextauth]/route";
-import { MaintenanceOverview } from ".next/dev/types/app";
 import LogoutButton from "@/components/ui/LogoutButton";
-import { OemSettings} from ".next/dev/types/app";
+import type { OemSettings } from "@/types";
 import {
   LayoutDashboard,
   Cpu,
@@ -39,10 +38,11 @@ type EventsResponse = {
   recentEvents: { id: string; message: string; severity: "info"|"warning"|"critical"; ts: string }[];
 };
 
-type MaintenanceResponse = {
+type MaintenanceOverview = {
   upcoming: { id: string; solutionId: string; plantName: string; dueInHours: number; checklistName?: string }[];
   overdue: { id: string; solutionId: string; plantName: string; overdueHours: number }[];
 };
+
 
 export default async function DashboardPage() {
   // auth
@@ -53,8 +53,8 @@ export default async function DashboardPage() {
 
   // 1) OEM settings (white-label)
   const oemSettings: OemSettings = await fetch("http://localhost:3000/api/oem/settings", { cache: "no-store" })
-    .then((r) => (r.ok ? r.json() : {}))
-    .catch(() => ({}));
+    .then((r) => (r.ok ? r.json() : {} as OemSettings))
+    .catch(() => ({} as OemSettings));
 
   // 2) Summary solutions
   const solutionsRes: SolutionsResponse = await fetch("http://localhost:3000/api/solutions/summary", { cache: "no-store" })

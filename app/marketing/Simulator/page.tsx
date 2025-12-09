@@ -64,14 +64,14 @@ export default function SimulatorPage() {
     const q_Servizi = inputs.services / Math.max(1, inputs.usageMonths);
     const monthlyTCO = q_HW + q_Servizi;
 
-    /* Operational margin requirement
+    //Operational margin requirement
     const operatingMargin = 0.2; // 20%
-    const minPriceWithMargin = monthlyTCO *(1 + operatingMargin);*/
+    const minPriceWithMargin = monthlyTCO *(1 + operatingMargin);
 
     // Search for best RaaSFee: iterate from fee that covers margin up to customer's monthly savings
     let bestRaaSFee: number | null = null;
     let bestROI_Opex = -Infinity;
-    const startFee = Math.ceil(Math.max(monthlyTCO, /*minPriceWithMargin,*/ 0));
+    const startFee = Math.ceil(Math.max(monthlyTCO, minPriceWithMargin, 0));
     const endFee = Math.floor(Math.max(0, monthlySavings));
     const debugIterations: { fee: number; roi: number }[] = [];
 
@@ -111,7 +111,7 @@ export default function SimulatorPage() {
       bestROI_Opex,
       mbtf: inputs.mbtf,
       monthlyTCO,
-      //minPriceWithMargin,
+      minPriceWithMargin,
       debugIterations,
     };
   }, [inputs]);
@@ -171,7 +171,7 @@ export default function SimulatorPage() {
                 </div>
                 <div className="flex justify-between">
                   <dt>TCO:</dt>
-                  <dd className="font-medium">{nf.format(derived.TCO)}</dd>
+                  <dd className="font-medium">{nf.format(derived.monthlyTCO)}</dd>
                 </div>
                 <div className="flex justify-between">
                   <dt>Payback (months):</dt>
@@ -246,7 +246,7 @@ export default function SimulatorPage() {
               <div>monthlyTCO: {nf.format(derived.monthlyTCO ?? 0)}</div>
               <div>monthlySavings: {nf.format(derived.monthlySavings)}</div>
               <div>minPriceWithMargin: {nf.format(derived.minPriceWithMargin ?? 0)}</div>
-              <div>startFee: {Math.ceil(Math.max(derived.monthlyTCO ?? 0, derived.minPriceWithMargin ?? 0, 0))}</div>
+              <div>startFee: {Math.ceil(Math.max(derived.monthlyTCO ?? 0, derived.minPriceWithMargin ?? 0, 0))}</div>*/
               <div>endFee: {Math.floor(Math.max(0, derived.monthlySavings))}</div>
             </div>
 

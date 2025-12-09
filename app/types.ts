@@ -37,3 +37,10 @@ export type SettingsData = {
     status: string;
   };
 };
+
+// app/types.ts
+export type OemSettings = {
+  companyName?: string;
+  primaryColor?: string;
+  theme?: string;
+};
