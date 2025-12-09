@@ -28,7 +28,7 @@ export default function Footer() {
           <Link href="/contact" className="hover:text-black">Contact</Link>
         </div>
 
-        {/* Colonna 3 */}
+        {/* Colonna 3 modificata ora */}
         <div className="flex flex-col gap-3">
           <h4 className="text-base font-medium text-black">Follow us on</h4>
             <a
