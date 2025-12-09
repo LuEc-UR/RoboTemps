@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/components/Logo";
+import { SiLinkedin, SiInstagram, SiYoutube } from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -29,9 +30,15 @@ export default function Footer() {
 
         {/* Colonna 3 */}
         <div className="flex flex-col gap-3">
-          <h4 className="text-base font-medium text-black">Follow</h4>
-          <Link href="https://linkedin.com" className="hover:text-black">LinkedIn</Link>
-          <Link href="https://twitter.com" className="hover:text-black">Twitter/X</Link>
+          <h4 className="text-base font-medium text-black">Follow us on</h4>
+            <a
+              href="https://www.linkedin.com/in/lucaeccherobot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-700 transition-colors"
+            >
+              <SiLinkedin size={24} />
+            </a>
         </div>
       </div>
 
