@@ -22,10 +22,10 @@ export default function Footer() {
         {/* Colonna 2 */}
         <div className="flex flex-col gap-3">
           <h4 className="text-base font-medium text-black">Company</h4>
-          <Link href="/about" className="hover:text-black">About</Link>
-          <Link href="/consulting" className="hover:text-black">Consulting</Link>
-          <Link href="/products" className="hover:text-black">Products</Link>
-          <Link href="/contact" className="hover:text-black">Contact</Link>
+          <Link href="@/marketing/about" className="hover:text-black">About</Link>
+          <Link href="@/marketing/consulting" className="hover:text-black">Consulting</Link>
+          <Link href="@/marketing/products" className="hover:text-black">Solutions</Link>
+          <Link href="@/marketing/contact" className="hover:text-black">Contact</Link>
         </div>
 
         {/* Colonna 3 modificata ora */}
