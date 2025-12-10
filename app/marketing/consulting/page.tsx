@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function ConsultingPage() {
   return (
-    <div className="min-h-screen bg-linear-to-b from-white to-gray-50">
+    <div className="min-h-screen bg-linear-to-b from-white to-gray-50 pb-20">
 
       {/* HERO */}
       <section className="max-w-6xl mx-auto p-5 pt-20 pb-10">
