@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function ConsultingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen bg-linear-to-b from-white to-gray-50">
 
       {/* HERO */}
       <section className="max-w-6xl mx-auto p-5 pt-20 pb-10">
@@ -110,7 +110,7 @@ export default function ConsultingPage() {
                         href="/contact"
                         className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded-2xl shadow-md transition-all"
                     >
-                        Apply the 4S Framework to Your Operations
+                        Apply the 4S Framework to Your Machines
                     </a>
                 </div>
             </motion.div>        
