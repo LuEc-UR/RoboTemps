@@ -21,8 +21,8 @@ export function Button({ href = "#", children, className }: ButtonProps) {
       <Link
         href={href}
         className={cn(
-          "px-6 py-3 rounded-xl bg-[#3A7AFE] text-white font-medium",
-          "shadow-md hover:bg-[#2F6AF3] transition inline-block"
+          "px-6 py-3 rounded-xl bg-[#3A7AFE] text-white font-medium shadow-md hover:bg-[#2F6AF3] transition",
+          className // <- ora i caller possono passare flex/items-center
         )}
       >
         {children}

@@ -59,8 +59,7 @@ export default function MarketingLandingPage() {
             href="/marketing/marketemps"
             className="flex items-center gap-2"
           >
-            Explore Marketemps
-            <ArrowRight size={18} />
+            Explore Marketemps <ArrowRight size={18} />
           </Button>
           
         </div>
