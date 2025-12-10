@@ -7,7 +7,7 @@ export default function Logo({ size = 40 }: { size?: number }) {
   return (
     <Link href="/marketing" className="flex items-center gap-3 group cursor-pointer">
       <Image
-        src="/R.png" // assicurati che il file sia in /public
+        src="/R1.png" // assicurati che il file sia in /public
         alt="RoboTemps Logo"
         width={size}
         height={size}
