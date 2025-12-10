@@ -56,8 +56,7 @@ export default function MarketingLandingPage() {
           </p>
 
           <Button href="/marketing/marketemps">
-              Explore Marketemps 
-              <ArrowRight size={18} />
+              Explore Marketemps <ArrowRight size={18} />
           </Button>
           
         </div>
