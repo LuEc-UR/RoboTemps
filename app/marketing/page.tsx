@@ -55,8 +55,12 @@ export default function MarketingLandingPage() {
             Each listing includes technical specs, performance insights and lead-generation forms.
           </p>
 
-          <Button href="/marketing/marketemps">
-              Explore Marketemps <ArrowRight size={18} />
+          <Button 
+            href="/marketing/marketemps"
+            className="flex items-center gap-2"
+          >
+            Explore Marketemps
+            <ArrowRight size={18} />
           </Button>
           
         </div>
