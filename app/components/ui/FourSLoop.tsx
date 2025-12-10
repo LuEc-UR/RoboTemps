@@ -34,10 +34,7 @@ const items = [
 export default function FourSLoop() {
   return (
     <section className="relative flex flex-col items-center py-20">
-      <h2 className="text-center text-4xl font-bold text-gray-900 mb-16">
-        The <span className="text-blue-600">4S Framework</span>
-      </h2>
-
+      
       <div className="relative w-[380px] h-[380px] md:w-[480px] md:h-[480px]">
 
         {/* Circle + Arrows */}
