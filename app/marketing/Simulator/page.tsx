@@ -128,7 +128,7 @@ export default function SimulatorPage() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900 mb-4"
+          className="text-5xl py-15 md:text-6xl font-bold tracking-tight text-gray-900 mb-4"
         >
           RaaS <span className="text-blue-600">Simulator</span>
         </motion.h1>
