@@ -25,9 +25,10 @@ export default function ConsultingPage() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
             >
-                <p className="leading-relaxed mb-6"> We help you to evaluate, design, and optimize 
-                    robotic automation by combining real-world case studies, technical analysis, and proven industry benchmark. 
-                    Our approach focuses on delivering systems that are reliable, efficient, and aligned with your EU's production goals.
+                <p className="leading-relaxed mb-6"> 
+                    We help you to evaluate, design, and optimize robotic automation by combining real-world case studies, technical 
+                    analysis, and proven industry benchmark. Our approach focuses on delivering systems that are reliable, efficient, 
+                    and aligned with your EU's production goals.
                 </p>
                 
                 {/* THREE CARDS */}
@@ -39,7 +40,7 @@ export default function ConsultingPage() {
                         whileInView={{ opacity: 1 }}
                     >
                         <Users className="w-10 h-10 mx-auto text-blue-600 mb-4" />
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2">Needs Analysis</h3>
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">NVA Analysis</h3>
                         <p className="text-gray-600">
                             We evaluate processes, flows, and production constraints to identify real opportunities.
                         </p>
@@ -70,32 +71,51 @@ export default function ConsultingPage() {
                     </motion.div>
                 </div>
 
-                <p className="leading-relaxed mb-6"> Through the principls of the 
-                    <span className="font bold">4S Framework - Standardize, Simplify, Scale, Servitize</span>
-                    we guide you in building solutions that are modular, easy to deploy for long term perfomance. 
-                    Standardized architectures reduce complexity, while simplified workflows accelerate implementation.
+                {/* 4S FRAMEWORKS SECTION (NEW + CLEAN + VISUAL) */}
+                <div className="max-w-4xl mx-auto text-center py-10">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        The <span className="text-blue-600">4S Framework</span>
+                    </h2>
+                    <p className="text-gray-600 mb-6">
+                        Our methodology to build robotic solutions that are modular, scalable,
+                        and designed for long-term performance.
+                    </p>
+                </div>
+
+
+                <motion.div
+                    variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.7 } } }}
+                    initial="hidden"
+                    whileInView="visible"
+                >
+                    <FourSLoop />
+                </motion.div>
+
+
+                <p className="leading-relaxed mt-10 mb-6 text-gray-600">
+                    Through the principles of the <span className="font-bold">4S Framework — Standardize, Simplify, Scale, 
+                        Servitize</span> — we guide you in creating automation architectures that reduce complexity and accelerate 
+                        deployment.
                 </p>
 
-                <p className="leading-relaxed mb-6"> Once your solution is ready, 
-                    we support you on transforming it into a marketable offering through 
-                    <span className="font-bold">Robotics-as-a-Service (RaaS)</span> models, 
-                    helping you scale recurring revenue and reach new customers.
+
+                <p className="leading-relaxed text-gray-600 mb-10">
+                    Once your solution is ready, we help you transform it into a scalable recurring-revenue stream
+                    through <span className="font-bold"> Robotics‑as‑a‑Service (RaaS) </span> models.
                 </p>
-            </motion.div>
+
+
+                <div className="text-center py-10">
+                    <a
+                        href="/contact"
+                        className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold rounded-2xl shadow-md transition-all"
+                    >
+                        Apply the 4S Framework to Your Operations
+                    </a>
+                </div>
+            </motion.div>        
         </section>
 
-        <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.7, delay: 0.2 },
-              },
-            }}
-        >
-            <FourSLoop />
-        </motion.div>
     </div>
   );
 }
